@@ -60,11 +60,29 @@
         android:textColor="#FFFFFF"/>
 
     <Button
+        android:id="@+id/gallery_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/capture_btn"
+        android:layout_centerHorizontal="true"
+        android:text="Gallery"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/rect_round_color_bg"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"/>
+
+    <Button
         android:id="@+id/analyse_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Analyse"
-        android:layout_below="@+id/capture_btn"
+        android:layout_below="@+id/gallery_btn"
         android:textAllCaps="false"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"

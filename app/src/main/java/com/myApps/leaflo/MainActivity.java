@@ -45,6 +45,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btnGallery = findViewById(R.id.gallery_btn);
+        btnGallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                        Intent intent = new Intent(Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(intent, 0);
+            }
+        });
+
         Button btnAnalyse = findViewById(R.id.analyse_btn);
         btnAnalyse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
 
             ImageView iv = findViewById(R.id.image);
             iv.setImageBitmap(bitmap);
+        }
+        if (requestCode == 0 && resultCode == RESULT_OK) {
+
+
+            ImageView iv = findViewById(R.id.image);
+            iv.setImageURI(data.getData());
         }
     }
 
